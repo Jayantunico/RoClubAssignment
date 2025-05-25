@@ -1,0 +1,3 @@
+{
+  "/(protected_routes)/test/page": "app/(protected_routes)/test/page.js"
+}

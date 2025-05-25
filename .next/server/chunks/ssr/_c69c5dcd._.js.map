@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["file:///Users/jayantjagtap/Work/RoClubAssignment/app/%28protected_routes%29/single-slot-booking/page.tsx"],"sourcesContent":["import React from \"react\";\n\nconst SingleSlotBooking = () => {\n  return <SingleSlotBookingProvider></SingleSlotBookingProvider>;\n};\n\nexport default SingleSlotBooking;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,oBAAoB;IACxB,qBAAO,6WAAC;;;;;AACV;uCAEe","debugId":null}}]
+}

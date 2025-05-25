@@ -1,0 +1,3 @@
+{
+  "/(protected_routes)/single-slot-booking/page": "app/(protected_routes)/single-slot-booking/page.js"
+}

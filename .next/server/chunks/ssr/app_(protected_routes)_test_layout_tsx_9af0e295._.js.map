@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/jayantjagtap/Work/RoClubAssignment/app/%28protected_routes%29/test/layout.tsx"],"sourcesContent":["import React, { FC } from \"react\";\n\nconst layout: FC<{ children: React.ReactNode }> = ({ children }) => {\n  return (\n    <div>\n      layout page\n      {children}\n    </div>\n  );\n};\n\nexport default layout;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,SAA4C,CAAC,EAAE,QAAQ,EAAE;IAC7D,qBACE,6WAAC;;YAAI;YAEF;;;;;;;AAGP;uCAEe","debugId":null}}]
+}
