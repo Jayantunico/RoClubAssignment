@@ -13,7 +13,7 @@ export function CommentsView() {
         best radiographers to your team.
       </p>
       <Label htmlFor="comments" className="text-xs font-medium text-gray-500">
-        Optional comments
+        Comments
       </Label>
 
       <Textarea

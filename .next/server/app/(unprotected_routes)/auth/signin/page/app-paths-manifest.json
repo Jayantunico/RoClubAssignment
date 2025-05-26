@@ -1,0 +1,3 @@
+{
+  "/(unprotected_routes)/auth/signin/page": "app/(unprotected_routes)/auth/signin/page.js"
+}

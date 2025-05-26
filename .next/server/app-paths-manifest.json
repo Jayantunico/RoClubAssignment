@@ -1,6 +1,6 @@
 {
-  "/(protected_routes)/exclusive-booking/page": "app/(protected_routes)/exclusive-booking/page.js",
   "/(protected_routes)/single-slot-booking/page": "app/(protected_routes)/single-slot-booking/page.js",
+  "/(unprotected_routes)/auth/signin/page": "app/(unprotected_routes)/auth/signin/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",

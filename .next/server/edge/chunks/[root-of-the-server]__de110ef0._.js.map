@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import { withAuth } from 'next-auth/middleware';\n\nexport default withAuth({\n  callbacks: {\n    authorized: ({ token }) => {\n      // Only allow access if token exists\n      return !!token;\n    },\n  },\n  pages: {\n    signIn: '/auth/signin',  // Custom sign-in page\n    error: '/auth/error',    // Error page\n  }\n});\n\n// Match all protected routes\nexport const config = {\n  matcher: [\n    '/single-slot-booking/:path*',\n    '/',\n    // Add other protected routes here\n  ]\n};"],"names":[],"mappings":";;;;AAAA;;uCAEe,CAAA,GAAA,gYAAA,CAAA,WAAQ,AAAD,EAAE;IACtB,WAAW;QACT,YAAY,CAAC,EAAE,KAAK,EAAE;YACpB,oCAAoC;YACpC,OAAO,CAAC,CAAC;QACX;IACF;IACA,OAAO;QACL,QAAQ;QACR,OAAO;IACT;AACF;AAGO,MAAM,SAAS;IACpB,SAAS;QACP;QACA;KAED;AACH"}}]
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import CustomCalender from "./CustomCalender";
 import CustomTimePicker from "./CustomTimePicker";
+import CustomCalender from "./CustomCalender";
 
 const DateTime = () => {
   return (

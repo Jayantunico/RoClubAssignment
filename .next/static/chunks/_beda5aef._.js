@@ -30,9 +30,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 const useAuth = ()=>{
     _s();
-    const { data: session, status } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$2d$auth$40$4$2e$24$2e$11_next$40$15$2e$3$2e$2_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_$5f$react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSession"])({
-        required: true
-    });
+    const { data: session, status } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$2d$auth$40$4$2e$24$2e$11_next$40$15$2e$3$2e$2_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_$5f$react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSession"])();
     const user = session?.user;
     const isAuthenticated = !!user;
     const getUserInitials = ()=>{
@@ -711,7 +709,10 @@ var _s = __turbopack_context__.k.signature();
 ;
 const NavMenu = ()=>{
     _s();
-    const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$nav_menu$2f$hooks$2f$useAuth$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    const { user, isAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$nav_menu$2f$hooks$2f$useAuth$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    if (!user) {
+        return null;
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$2_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex items-center justify-between p-4 border-b",
         children: [
@@ -723,29 +724,29 @@ const NavMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/nav_menu/views/NavMenu.tsx",
-                lineNumber: 10,
+                lineNumber: 14,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$2_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center gap-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$2_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$nav_menu$2f$views$2f$AuthMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AuthMenu"], {}, void 0, false, {
                     fileName: "[project]/app/components/nav_menu/views/NavMenu.tsx",
-                    lineNumber: 12,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/nav_menu/views/NavMenu.tsx",
-                lineNumber: 11,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/nav_menu/views/NavMenu.tsx",
-        lineNumber: 9,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 };
-_s(NavMenu, "9ep4vdl3mBfipxjmc+tQCDhw6Ik=", false, function() {
+_s(NavMenu, "ZciNvz1w38ujgxJkc4IsNEDLTNc=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$nav_menu$2f$hooks$2f$useAuth$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];

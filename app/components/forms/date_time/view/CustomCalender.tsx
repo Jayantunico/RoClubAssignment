@@ -18,6 +18,7 @@ const CustomCalender = () => {
     handleNextYear,
     handlePreviousMonth,
     handleNextMonth,
+    singleDatehandler,
   } = useCalendarControls();
 
   return (
@@ -34,7 +35,7 @@ const CustomCalender = () => {
       <DayPicker
         mode="single"
         selected={date}
-        onSelect={setDate}
+        onSelect={singleDatehandler}
         month={date}
         onMonthChange={setDate}
         showOutsideDays

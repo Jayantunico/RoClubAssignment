@@ -1,6 +1,6 @@
 
 interface DateAndTime {
-    date: Date,
+    date: Date | undefined,
     time: { from: string, to: string }
 }
 

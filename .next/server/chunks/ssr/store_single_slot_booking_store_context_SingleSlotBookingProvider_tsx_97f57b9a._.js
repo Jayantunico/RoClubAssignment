@@ -42,7 +42,7 @@ function SingleSlotBookingProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/store/single_slot_booking_store/context/SingleSlotBookingProvider.tsx",
-        lineNumber: 39,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }

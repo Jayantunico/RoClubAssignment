@@ -71,7 +71,18 @@ export const authOptions: NextAuthOptions = {
             }
             return token;
         },
+        async redirect({ url, baseUrl }) {
 
+            if (url.startsWith("/")) return `${baseUrl}${url}`
+
+            else if (new URL(url).origin === baseUrl) return url
+            return baseUrl
+        },
+
+    },
+    pages: {
+        signIn: '/auth/signin',
+        // error: '/auth/error', // Error code passed in query string as ?error=
     },
     secret: process.env.AUTH_SECRET,
 };

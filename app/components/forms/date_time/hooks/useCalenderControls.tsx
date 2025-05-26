@@ -1,12 +1,31 @@
 "use client";
 import { useSingleSlotBooking } from "@/store/single_slot_booking_store/hooks/useSingleSlotBooking";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { SelectSingleEventHandler } from "react-day-picker";
+
+function istToUtc(istDate: string) {
+  // Create a copy of the original date
+  const date = new Date(istDate);
+
+  // Get current timezone offset in minutes (IST is -330 minutes from UTC)
+  const istOffset = 330; // 5 hours 30 minutes in minutes
+
+  // Get the current time in UTC milliseconds
+  const utcTime = date.getTime() - istOffset * 60 * 1000;
+
+  return new Date(utcTime);
+}
 
 export const useCalendarControls = () => {
   const { setSingleSlotBooking, singleSlotBooking } = useSingleSlotBooking();
-  const [date, setDate] = useState<Date | undefined>(
-    singleSlotBooking?.form1?.date
-  );
+
+  useEffect(() => {
+    setSingleSlotBooking(
+      (prev) => (prev = { ...prev, form1: { ...prev.form1, date: new Date() } })
+    );
+  }, []);
+
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
   const navigate = (unit: "year" | "month", direction: "prev" | "next") => {
     if (!date) return;
@@ -22,13 +41,22 @@ export const useCalendarControls = () => {
 
     setDate(newDate);
     setSingleSlotBooking(
-      (prev) => (prev = { ...prev, form1: { ...prev.form1, date: newDate } })
+      (prev) =>
+        (prev = { ...prev, form1: { date: newDate, time: prev.form1.time } })
+    );
+  };
+
+  const singleDatehandler: SelectSingleEventHandler = (e) => {
+    setDate((prev) => (prev = e));
+    setSingleSlotBooking(
+      (prev) => (prev = { ...prev, form1: { ...prev.form1, date: e } })
     );
   };
 
   return {
     date,
     setDate,
+    singleDatehandler,
     navigate,
     monthName: date?.toLocaleString("default", { month: "short" }),
     year: date?.getFullYear(),
